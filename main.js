@@ -1,27 +1,15 @@
-// selectors
-const toggleBtn = document.querySelector("#toggleBtn");
+const submitBtn = document.querySelector("#submitBtn");
+const tryAgainBtn = document.querySelector("#tryAgainBtn");
 
-// state
-const theme = localStorage.getItem("theme");
+let q1 = document.querySelector("[name='q1']").value;
+let q2 = document.querySelector("[name='q2']").value;
+let q3 = document.querySelectorAll("[name='q3']").value;
+let q4 = document.querySelector("[name='q4']").value;
+let q5 = document.querySelector("[name='q5']").value;
+let q6 = document.querySelector("[name='q6']").value;
+let q7 = document.querySelectorAll("[name='q7']").value;
+let q8 = document.querySelector("[name='q8']").value;
+let q9 = document.querySelector("[name='q9']").value;
+let q10 = document.querySelector("[name='q10']").value;
 
-// on mount, something that happens when page first loads
-theme && document.body.classList.add(theme);
-
-// handlers
-handleThemeToggle = () => {
-    document.body.classList.toggle("darkmode");
-    if (document.body.classList.contains("darkmode")) {
-        localStorage.setItem("theme", "darkmode");
-    } else {
-        localStorage.removeItem("theme");
-    }
-}
-handleBtnToggle = () => {
-    document.button.classList.toggle("darkmodeBtn");
-}
-
-// events
-toggleBtn.addEventListener("click", handleThemeToggle);
-
-
-
+console.log(q10);
