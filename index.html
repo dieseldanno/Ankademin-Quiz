@@ -28,36 +28,36 @@
           Which character faced a scandalous love triangle involving their
           ex-partner and a new lover?
         </h3>
-        <input type="radio" name="q1" id="q1a" value="right" />
+        <input type="radio" name="q1" id="q1a" value="right" class="q" />
         <label for="q1a">Tina</label><br />
-        <input type="radio" name="q1" id="q1b" value="wrong" />
+        <input type="radio" name="q1" id="q1b" value="wrong" class="q" />
         <label for="q1b">Carmen</label><br />
-        <input type="radio" name="q1" id="q1c" value="wrong" />
+        <input type="radio" name="q1" id="q1c" value="wrong" class="q" />
         <label for="q1c">Helena</label><br />
-        <input type="radio" name="q1" id="q1d" value="wrong" />
+        <input type="radio" name="q1" id="q1d" value="wrong" class="q" />
         <label for="q1d">Alice</label><br />
       </div>
       <div class="question-box">
-        <h3>Why does Alice's mother, Lenore, put her name on the Chart?</h3>
-        <input type="radio" name="q2" id="q2a" value="wrong" />
-        <label for="q2a">She's messing with Alice</label><br />
-        <input type="radio" name="q2" id="q2b" value="wrong" />
-        <label for="q2b">She kissed Bette</label><br />
-        <input type="radio" name="q2" id="q2c" value="right" />
-        <label for="q2c">She kissed Shane</label><br />
-        <input type="radio" name="q2" id="q2d" value="wrong" />
-        <label for="q2d">None of the above</label><br />
+        <h3>Which of these lyrics are in the theme song? (Choose 3 answers)</h3>
+        <input type="checkbox" name="q2" id="q2a" value="right" class="q" />
+        <label for="q2a">Talking, laughing, loving, breathing</label><br />
+        <input type="checkbox" name="q2" id="q2b" value="right" class="q" />
+        <label for="q2b">Fighting, fucking, crying, drinking</label><br />
+        <input type="checkbox" name="q2" id="q2c" value="right" class="q" />
+        <label for="q2c">Riding, winning, losing, cheating</label><br />
+        <input type="checkbox" name="q2" id="q2d" value="wrong" class="q" />
+        <label for="q2d">Jumping, boxing, flying, trying</label><br />
       </div>
       <div class="question-box">
-        <h3>Which of these lyrics are in the theme song? (Choose 3 answers)</h3>
-        <input type="checkbox" name="q3" id="q3a" value="right" />
-        <label for="q3a">Talking, laughing, loving, breathing</label><br />
-        <input type="checkbox" name="q3" id="q3b" value="right" />
-        <label for="q3b">Fighting, fucking, crying, drinking</label><br />
-        <input type="checkbox" name="q3" id="q3c" value="right" />
-        <label for="q3c">Riding, winning, losing, cheating</label><br />
-        <input type="checkbox" name="q3" id="q3d" value="wrong" />
-        <label for="q3d">Jumping, boxing, flying, trying</label><br />
+        <h3>Why does Alice's mother, Lenore, put her name on the Chart?</h3>
+        <input type="radio" name="q3" id="q3a" value="wrong" class="q" />
+        <label for="q3a">She's messing with Alice</label><br />
+        <input type="radio" name="q3" id="q3b" value="wrong" class="q" />
+        <label for="q3b">She kissed Bette</label><br />
+        <input type="radio" name="q3" id="q3c" value="right" class="q" />
+        <label for="q3c">She kissed Shane</label><br />
+        <input type="radio" name="q3" id="q3d" value="wrong" class="q" />
+        <label for="q3d">None of the above</label><br />
       </div>
       <div class="question-box">
         <h3>Dana Fairbanks was a proffesional basketball player?</h3>
@@ -94,15 +94,11 @@
         <label for="q6d">Max</label><br />
       </div>
       <div class="question-box">
-        <h3>What kind of jobs has Alice Pieszecki had? (Choose 3 answers)</h3>
-        <input type="checkbox" name="q7" id="q7a" value="right" />
-        <label for="q7a">Radio host</label><br />
-        <input type="checkbox" name="q7" id="q7b" value="right" />
-        <label for="q7b">Podcaster</label><br />
-        <input type="checkbox" name="q7" id="q7c" value="wrong" />
-        <label for="q7c">Standup comedian</label><br />
-        <input type="checkbox" name="q7" id="q7d" value="right" />
-        <label for="q7d">Talkshow host</label><br />
+        <h3>Helena Peabody and Marina Ferrer had an affair?</h3>
+        <input type="radio" name="q7" id="q7a" value="wrong" />
+        <label for="q7a">True</label><br />
+        <input type="radio" name="q7" id="q7b" value="right" />
+        <label for="q7b">False</label><br />
       </div>
       <div class="question-box">
         <h3>Shane McCutcheon has slept with over 1000 women?</h3>
@@ -112,11 +108,15 @@
         <label for="q8b">False</label><br />
       </div>
       <div class="question-box">
-        <h3>Helena Peabody and Marina Ferrer had an affair?</h3>
-        <input type="radio" name="q9" id="q9a" value="wrong" />
-        <label for="q9a">True</label><br />
-        <input type="radio" name="q9" id="q9b" value="right" />
-        <label for="q9b">False</label><br />
+        <h3>What kind of jobs has Alice Pieszecki had? (Choose 3 answers)</h3>
+        <input type="checkbox" name="q9" id="q9a" value="right" />
+        <label for="q9a">Radio host</label><br />
+        <input type="checkbox" name="q9" id="q9b" value="right" />
+        <label for="q9b">Podcaster</label><br />
+        <input type="checkbox" name="q9" id="q9c" value="wrong" />
+        <label for="q9c">Standup comedian</label><br />
+        <input type="checkbox" name="q9" id="q9d" value="right" />
+        <label for="q9d">Talkshow host</label><br />
       </div>
       <div class="question-box">
         <h3>And lastly... Who killed Jenny Schekter?</h3>
@@ -129,9 +129,9 @@
         <input type="radio" name="q10" id="q10d" value="right" />
         <label for="q10d">No one knows..</label><br />
       </div>
+      <div id="resultContainer"></div>
       <button id="submitBtn" class="button">Submit</button>
       <button id="tryAgainBtn" class="button">Try Again</button>
-      <div id="resultContainer"></div>
     </div>
   </body>
 </html>
