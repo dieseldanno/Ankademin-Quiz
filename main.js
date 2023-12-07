@@ -1,18 +1,13 @@
 //Global variables
 let submitBtn = document.querySelector("#submitBtn");
 let tryAgainBtn = document.querySelector("#tryAgainBtn");
+let answersBtn = document.querySelector("#answersBtn");
 let resultContainer = document.querySelector("#resultContainer");
 
 submitBtn.addEventListener("click", () => {
     resultContainer.innerHTML = "";
 
-    if (event.target.value === "right") {
-        label.style.color = "green";
-    } else if (event.target.value === "wrong") {
-        label.style.color = "red";
-    }
-
-    let points = 0;
+    let points = 0; 
     let maxPoints = 10;
 
     //Saves value of each radiobutton
@@ -72,9 +67,25 @@ submitBtn.addEventListener("click", () => {
     resultContainer.style.color = color;
     resultContainer.innerHTML = `${text} You got ${points}/10.`;
 
+    submitBtn.style.display = "none";
+    tryAgainBtn.style.display = "block";
+    answersBtn.style.display = "block";
+
 });
 
 tryAgainBtn.addEventListener("click", () => {
     location.reload();
     window.scrollTo(0, 0);
+});
+
+answersBtn.addEventListener("click", () => {
+    let questions = document.querySelectorAll("[value]");
+
+    questions.forEach((item) => {
+        if (item.value === "right") {
+            item.nextElementSibling.style.color = "green";
+        } else if (item.value === "wrong") {
+            item.nextElementSibling.style.color = "red";
+        }
+    });
 });
