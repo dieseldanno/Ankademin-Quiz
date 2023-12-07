@@ -4,6 +4,7 @@ let tryAgainBtn = document.querySelector("#tryAgainBtn");
 let answersBtn = document.querySelector("#answersBtn");
 let resultContainer = document.querySelector("#resultContainer");
 
+
 submitBtn.addEventListener("click", () => {
     resultContainer.innerHTML = "";
 

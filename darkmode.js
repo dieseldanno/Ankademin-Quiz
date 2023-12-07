@@ -1,13 +1,15 @@
-// selectors
+//Togglebtn that stays on the chosen theme even if page is reloaded
+
+//Selectors
 const toggleBtn = document.querySelector("#toggleBtn");
 
-// state
+//State
 const theme = localStorage.getItem("theme");
 
-// on mount, something that happens when page first loads
+//On mount, something that happens when page first loads
 theme && document.body.classList.add(theme);
 
-// handlers
+//Handlers
 handleThemeToggle = () => {
     document.body.classList.toggle("darkmode");
     if (document.body.classList.contains("darkmode")) {
@@ -20,7 +22,7 @@ handleBtnToggle = () => {
     document.button.classList.toggle("darkmodeBtn");
 }
 
-// events
+//Events
 toggleBtn.addEventListener("click", handleThemeToggle);
 
 
