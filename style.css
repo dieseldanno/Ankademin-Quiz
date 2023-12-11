@@ -76,6 +76,13 @@ body {
 
 label {
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: rgb(255, 0, 115);
 }
 
 
