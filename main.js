@@ -10,12 +10,19 @@ let checkboxTwo = document.querySelector("#checkboxTwo");
 
 //Limit amount of checked checkboxes
 checkboxOne.addEventListener("click", (event) => {
+
+    //Checks if checkbox i clicked
     if (event.target.type === "checkbox") {
+
+        //If true +1 to selectedCount, if false -1
         selectedCountOne = event.target.checked ? selectedCountOne + 1 : selectedCountOne - 1;
     }
 
+    //Selects all checkboxes inside the specifik div
     const checkboxesQ2 = checkboxOne.querySelectorAll("[name='q2']");
 
+    //Loops through each box, checks if selectedCount is true and input.checked is false,
+    //if so the remaining box is disabled, and if not disabled is removed
     checkboxesQ2.forEach((input) => {
         if (selectedCountOne >= 3 && !input.checked) {
             input.disabled = true;
@@ -25,6 +32,7 @@ checkboxOne.addEventListener("click", (event) => {
     });
 });
 
+//Same code but different div
 checkboxTwo.addEventListener("click", (event) => {
     if (event.target.type === "checkbox") {
         selectedCountTwo = event.target.checked ? selectedCountTwo + 1 : selectedCountTwo - 1;
