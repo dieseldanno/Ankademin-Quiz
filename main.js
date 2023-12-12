@@ -3,20 +3,43 @@ let submitBtn = document.querySelector("#submitBtn");
 let tryAgainBtn = document.querySelector("#tryAgainBtn");
 let answersBtn = document.querySelector("#answersBtn");
 let resultContainer = document.querySelector("#resultContainer");
-let checkboxes = document.querySelectorAll("#q2a input[type='checkbox']");
-let checkboxLimit = 3;
+let selectedCountOne = 0;
+let selectedCountTwo = 0;
+let checkboxOne = document.querySelector("#checkboxOne");
+let checkboxTwo = document.querySelector("#checkboxTwo");
 
-// checkboxes.forEach((box) => {
-//     box.addEventListener("change", function() {
-//         let listenToChecked = document.querySelectorAll("#q2a input[type='checkbox']:checked").length;
+//Limit amount of checked checkboxes
+checkboxOne.addEventListener("click", (event) => {
+    if (event.target.type === "checkbox") {
+        selectedCountOne = event.target.checked ? selectedCountOne + 1 : selectedCountOne - 1;
+    }
 
-//         if (listenToChecked > checkboxLimit) {
-//             box.checked = false;
-//         }
-//     });
-// });
+    const checkboxesQ2 = checkboxOne.querySelectorAll("[name='q2']");
 
+    checkboxesQ2.forEach((input) => {
+        if (selectedCountOne >= 3 && !input.checked) {
+            input.disabled = true;
+        } else {
+            input.disabled = false;
+        }
+    });
+});
 
+checkboxTwo.addEventListener("click", (event) => {
+    if (event.target.type === "checkbox") {
+        selectedCountTwo = event.target.checked ? selectedCountTwo + 1 : selectedCountTwo - 1;
+    }
+
+    const checkboxesQ9 = checkboxTwo.querySelectorAll("[name='q9']");
+
+    checkboxesQ9.forEach((input) => {
+        if (selectedCountTwo >= 3 && !input.checked) {
+            input.disabled = true;
+        } else {
+            input.disabled = false;
+        }
+    });
+});
 
 //Submit, checks the answers, counts and delivers total points
 submitBtn.addEventListener("click", () => {
@@ -75,11 +98,11 @@ submitBtn.addEventListener("click", () => {
                 text = "No comments.. You should try again. "
     }
 
-    // resultContainer.style.backgroundColor = color;
-    resultContainer.style.color = color;
-    resultContainer.style.fontSize = "25px";
-    resultContainer.style.fontWeight = 600;
-    // resultContainer.style.padding = "15px";
+    resultContainer.style.backgroundColor = color;
+    resultContainer.style.color = "white";
+    resultContainer.style.fontSize = "18px";
+    resultContainer.style.fontWeight = 500;
+    resultContainer.style.padding = "15px";
     resultContainer.style.borderRadius = "30px";
     resultContainer.innerHTML = `${text} You got ${points}/10`;
 
