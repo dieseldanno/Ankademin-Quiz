@@ -47,10 +47,6 @@ body {
   touch-action: manipulation;
 }
 
-.button:hover {
-  background-color: #fff;
-}
-
 .button:active {
   box-shadow: #743a54 2px 2px 0 0;
   transform: translate(2px, 2px);
@@ -95,4 +91,10 @@ input[type="radio"], input[type="checkbox"] {
     display: none;
     margin-bottom: 30px;
     margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+    .question-box {
+        width: 90%;
+    }
 }
