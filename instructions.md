@@ -1,45 +1,39 @@
 Ankademin Quiz
 
-Beskrivning
+Description
 
-Du har fått i uppgift att skapa en quiz-applikation åt Ankademin. Användare ska kunna svara på frågor och få feedback på huruvida hen besvarat dessa rätt eller fel. Applikationen ska fungera utan några större buggar. Du väljer själv vilka frågor som quizet ska bestå utav.
+You've been tasked with creating a quiz application for Ankademin. Users should be able to answer questions and receive feedback on whether they answered correctly or incorrectly. The application should function without major bugs. You can choose the questions for the quiz.
 
-Du ska även ha ditt projekt på Github och pusha upp kod kontinuerligt under projektets gång.
+You are also required to have your project on Github and continuously push the code during the project's development.
 
-Kravsättning
+Requirements
 
-Betyg G
+Grade G
 
-Quizet innehåller 10 frågor. Frågorna består av sant/falskt påståenden med två möjliga svarsalternativ: Sant eller Falskt.
+The quiz contains 10 questions. The questions consist of true/false statements with two possible answer options: True or False.
 
-Användaren ska utöver att besvara frågor för quizet, även kunna byta utseende på sidan mellan dark mode (dvs mörk bakgrundsfärg med ljus text ) och light mode (ljus bakgrundsfärg med mörk text).
+In addition to answering questions for the quiz, the user should be able to change the appearance of the page between dark mode (dark background color with light text) and light mode (light background color with dark text).
 
-Användaren ska kunna besvara samtliga frågor och sedan klicka på en knapp för att se sitt resultat.
+The user should be able to answer all questions and then click a button to see their result.
 
-Skriv ut antal rätt som användaren fått. Använd även färg och text för att meddela användarens resultat utefter följande kriterier:
+Display the number of correct answers the user got. Use color and text to communicate the user's result according to the following criteria:
 
-< 50% - Underkänt (röd)
+Less than 50% - Failed (red)
+50%-75% - Good (yellow/orange)
+Greater than 75% - Very well done (green)
+You have made at least 8 commits to your Github repository during the project.
 
-50%-75% - Bra (gul/orange)
+Grade VG
 
-> 75% - Riktigt bra jobbat (grönt)
+All Grade G requirements are met.
 
-Du har gjort minst 8 commits till ditt Github-repository under projektets gång.
+The questions should consist of a mix of the following types (at least 2 of each type):
 
-Betyg VG
+True/false statements - (Two answer options - True or False)
+Multiple choice - (Four answer options with one correct answer)
+Checkbox answers (4 checkboxes with options - 2 or 3 correct, others incorrect).
+The user should be able to see exactly which questions they answered correctly and/or incorrectly when the result is displayed. (If they answered a question incorrectly, you can decide whether to display the correct answer or not).
 
-Alla G-krav är uppfyllda
+Technical requirement: The code follows the "DRY" principle (Don't Repeat Yourself), avoiding major repetitions of code in the logic.
 
-Frågorna ska bestå utav en blandning av följande typer (minst 2 av varje typ)
-
-Sant/falskt-påståenden - (Två svarsalternativ - Sant eller Falskt)
-
-Multiple choice - (Fyra svarsalternativ varav ett rätt svar)
-
-Checkbox-svar (4 checkboxar med svarsalternativ - 2 eller 3 rätta svar, övriga felaktig).
-
-Användaren ska kunna se exakt vilka frågor hen besvarat rätt och/eller felaktigt när resultatet visas. (Om hen besvarat frågan fel, bestämmer du själv om du vill skriva ut det rätta svaret eller inte).
-
-Tekniskt krav: Koden följer “DRY”-principen (Dont repeat yourself), undviker större upprepningar av kod i logiken.
-
-Bonus: Försök att snygga till quizet med CSS så att den ser lite mer användarvänlig ut!
+Bonus: Try to improve the quiz with CSS to make it more user-friendly!

@@ -1,4 +1,5 @@
 //Togglebtn that stays on the chosen theme even if page is reloaded
+//Looks for the key/value saved in local storage and adapts after it
 
 //Selectors
 const toggleBtn = document.querySelector("#toggleBtn");

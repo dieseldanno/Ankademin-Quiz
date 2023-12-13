@@ -1,4 +1,6 @@
 //Global variables
+let points = 0; 
+const maxPoints = 10;
 let submitBtn = document.querySelector("#submitBtn");
 let tryAgainBtn = document.querySelector("#tryAgainBtn");
 let answersBtn = document.querySelector("#answersBtn");
@@ -32,7 +34,7 @@ checkboxOne.addEventListener("click", (event) => {
     });
 });
 
-//Same code but different div
+//Same logic as above but different div
 checkboxTwo.addEventListener("click", (event) => {
     if (event.target.type === "checkbox") {
         selectedCountTwo = event.target.checked ? selectedCountTwo + 1 : selectedCountTwo - 1;
@@ -53,11 +55,14 @@ checkboxTwo.addEventListener("click", (event) => {
 submitBtn.addEventListener("click", () => {
     resultContainer.innerHTML = "";
 
-    let points = 0; 
-    let maxPoints = 10;
-
     //Saves value of each radiobutton
     let radiobuttons = document.querySelectorAll("[type='radio']:checked");
+
+    //Checks if user has answered all radio questions, if not ALERT
+    if (radiobuttons.length < 8) {
+        alert("please answer all questions");
+        return;
+    }
 
     //Loops through each type=radio, and only if it matches the value, +1
     radiobuttons.forEach((item) => {
@@ -69,6 +74,12 @@ submitBtn.addEventListener("click", () => {
     //Saves value of checkbox-questions into nodelist
     let q2 = document.querySelectorAll("[name='q2']:checked");
     let q9 = document.querySelectorAll("[name='q9']:checked");
+
+    //Checks if user has answered checkbox questions, if not ALERT
+    if (q2.length === 0 || q9.length === 0) {
+        alert("please answer all questions");
+        return;
+    }
 
     //Function for counting only if all 3 right answers are checked
     function countAnswers(checkboxes) {
@@ -127,7 +138,7 @@ tryAgainBtn.addEventListener("click", () => {
     window.scrollTo(0, 0);
 });
 
-//Show answer, looks for every value with right/wrong, colors the sibling associated with it
+//Show answer, looks for every value with right/wrong, colors the nearest siblings
 answersBtn.addEventListener("click", () => {
     let questions = document.querySelectorAll("[value]");
 
@@ -143,5 +154,6 @@ answersBtn.addEventListener("click", () => {
         }
     });
 });
+
 
 
